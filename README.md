@@ -17,14 +17,16 @@ This document excludes areas where vulnerabilities are common, such as networkin
 
 # Vulnerability Summary
 
-| Subsystem | CVE | Impact | Tested target | Introduced | Fixed |
-| --- | --- | --- | --- | --- | --- |
-| Timer | CVE-2026-98260 | LPE, Container escape, Android LPE | Ubuntu 26.04 7.0.0-30-generic, Galaxy S26 Ultra S948NKSS4BZIG | 55e8c8eb2c7b | acb03d388181 |
-| Signal | CVE-2026-98256 | LPE, Container escape | Ubuntu 26.04 7.0.0-30-generic | fb3bbcfe344e | d2710c8d938a |
-| MM | CVE-2026-89754 | LPE, Container escape | Ubuntu 26.04 7.0.0-30-generic | 3b89863c3fa4 | aedf2efd1897 |
-| Futex | CVE-2026-80775 | LPE, Container escape | Ubuntu 26.04 7.0.0-30-generic | d9b05321e21e | bde023808364 |
-| Scheduler | CVE-2026-98385 | LPE, Container escape | Arch Linux 7.2.4-arch1-2 | df0d98475954 | 28f9c0e0a0b9, b636fef85bda |
-| SLAB | CVE-2026-97941 | Kernel panic | Arch Linux 7.2.4-arch1-2 | ba7425312607 | 4a724bcf5d70 |
+| Subsystem | CVE | Impact | Tested target | Introduced | Fixed | Stable 5.15 / 6.12 / 6.18 |
+| --- | --- | --- | --- | --- | --- | --- |
+| Timer | CVE-2026-98260 | LPE, Container escape, Android LPE | Ubuntu 26.04 7.0.0-30-generic, Galaxy S26 Ultra S948NKSS4BZIG | 55e8c8eb2c7b | acb03d388181 | unfixed / 6.12.112 / 6.18.54 |
+| Signal | CVE-2026-98256 | LPE, Container escape | Ubuntu 26.04 7.0.0-30-generic | fb3bbcfe344e | d2710c8d938a | n/a / n/a / 6.18.54 |
+| MM | CVE-2026-89754 | LPE, Container escape | Ubuntu 26.04 7.0.0-30-generic | 3b89863c3fa4 | aedf2efd1897 | n/a / n/a / 6.18.50 |
+| Futex | CVE-2026-80775 | LPE, Container escape | Ubuntu 26.04 7.0.0-30-generic | d9b05321e21e | bde023808364 | n/a / n/a / 6.18.47 |
+| Scheduler | CVE-2026-98385 | LPE, Container escape | Arch Linux 7.2.4-arch1-2 | df0d98475954 | 28f9c0e0a0b9, b636fef85bda | n/a / n/a / n/a |
+| SLAB | CVE-2026-97941 | Kernel panic | Arch Linux 7.2.4-arch1-2 | ba7425312607 | 4a724bcf5d70 | n/a / n/a / n/a |
+
+Stable column: first stable release containing the backported fix; *n/a*: the introducing commit is not in that branch; *unfixed*: affected, but no backport as of 5.15.223.
 
 # Technical Analysis
 
